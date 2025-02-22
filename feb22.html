@@ -56,6 +56,39 @@
             height: 3px;
             background: linear-gradient(to right,red,yellow,blue,green);
         }
+        .box{
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            
+            position: relative;
+            animation-name: slide;
+            animation-duration: 2s;
+            animation-delay: 1s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            
+        }
+        @keyframes slide{
+            0%{left: 0; transform:scale(1.2) rotate(360deg);}
+            100%{left: 300px;}
+            
+        } 
+           .gallery{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,1fr);
+            gap: 10px;
+           } 
+           @media (max-width:600px )  {
+            .gallery{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(4,1fr);
+            gap: 10px;
+           } 
+           }
+        
     </style>
 </head>
 <body>
@@ -80,10 +113,24 @@
         this is a card with a border ,padding and marigin
     </div><hr>
 
+    <!-- fifth -->
+     <div class="gallery">
+        <img src="image/img1.jpg" alt="img" width="300px" height="200px">
+        <img src="image/image1.jpg" alt="img" width="300px" height="200px">
+        <img src="image/img2.jpg" alt="imh" width="300px" height="200px">
+        <img src="image/img3.jpg" alt="img" width="300px" height="200px">
+     </div>
+
     <!-- sixth -->
      <button class="btn">Button</button><hr>
 
 <!-- seven -->
  <button class="btn2">MENU</button><hr>
+
+ <!-- eighth -->
+  <div class="box"></div>
+  <hr>
+
+  <!--  -->
 </body>
 </html>
